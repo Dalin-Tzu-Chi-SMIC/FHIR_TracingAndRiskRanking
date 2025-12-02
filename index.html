@@ -112,7 +112,7 @@
         大林慈濟醫院-疫調系統沙盒驗證
       </h1>
         <div class="form-group">
-          <label for="patientId">病人 Patient ID（FHIR）</label>
+          <label for="patientId">病人ID</label>
           <input
             type="text"
             id="patientId"
@@ -128,7 +128,7 @@
           <input type="date" id="endDate" />
         </div>
         <div class="form-group" style="align-self: flex-end">
-          <button id="btnFetch">查詢 FHIR 資料</button>
+          <button id="btnFetch">查詢資料</button>
         </div>
       </div>
 
@@ -161,8 +161,8 @@
     </div>
 
     <div class="card">
-      <h2>除錯用原始 JSON</h2>
-      <div class="small">方便比對 FHIR 結構。</div>
+      <h2>原始 JSON</h2>
+      <div class="small">比對結構。</div>
       <textarea id="rawJson" readonly></textarea>
     </div>
 
@@ -358,7 +358,7 @@
         if (allRows.length === 0) {
           statusText.textContent = "查詢完成，但沒有找到任何接觸史資料。";
         } else {
-          statusText.textContent = `查詢完成，共 ${allRows.length} 筆接觸史（最多抓 ${maxPages} 頁 Encounter）。`;
+          statusText.textContent = `查詢完成，共 ${allRows.length} 筆接觸史。`;
         }
 
         btnFetch.disabled = false;
@@ -471,3 +471,4 @@
     </script>
   </body>
 </html>
+
